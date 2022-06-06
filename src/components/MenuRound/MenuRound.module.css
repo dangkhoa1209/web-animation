@@ -1,0 +1,178 @@
+:root{
+    --positon: 0px;
+}
+
+.main{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(9, 10, 29);
+    min-height: 400px;
+}
+
+.box{
+    width: 80%;
+    min-height: 400px;
+    max-width: 400px;
+    margin: auto;
+    align-items: center;
+    position: relative;
+    padding: 50px 0px;
+}
+
+.menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-color: rgb(9, 10, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 1.5s ease;
+}
+
+.menu:hover{
+    cursor: pointer;
+    border: 1px solid aqua;
+}
+
+.menu:hover .icon_menu{
+    color: aqua;
+}
+
+
+.icon{
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.icon_menu{
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(9, 10, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.active{
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+    animation: active 1.5s ease;
+}
+
+.unactive{
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    animation: unactive 1.5s ease;
+}
+
+@keyframes active {
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 1;
+    }
+}
+
+@keyframes unactive {
+    0%{
+        width: 200px;
+        height: 200px;
+        opacity: 1;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(calc(45deg * var(--i)));
+}
+
+.item span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.5s;
+    position: absolute;
+}
+
+.menu:hover,
+.item span:hover{
+    box-shadow: 0px 0px 10px aqua, 0px 0px 50px aqua, 0px 0px 90px aqua;
+}
+
+.item span:hover .icon{
+    color: aqua;
+}
+
+.item span:nth-child(1){
+    top:var(--positon);
+    left:var(--positon);
+    transform: rotate(calc(-45deg));
+}
+
+.item span:nth-child(2){
+    top:var(--positon);
+    right:var(--positon);
+    transform: rotate(calc(45deg));
+}
+
+.item span:nth-child(3){
+    bottom:var(--positon);
+    right:var(--positon);
+    transform: rotate(calc(-90deg));
+}
+
+.item span:nth-child(4){
+    bottom:var(--positon);
+    left:var(--positon);
+    transform: rotate(calc(-135deg));
+}
+
+
+
+
+
+
+
+
+
+
+

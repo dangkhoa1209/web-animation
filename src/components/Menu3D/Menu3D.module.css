@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.main{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    background-color: #434750;
+}
+
+.box{
+    width: 60%;
+    max-width: 500px;
+    margin: auto;
+    align-items: center;
+    padding: 100px 0px;
+}
+
+.ul{
+    position: relative;
+    transform: skewY(-15deg);
+    max-width: 250px;
+    margin: auto;
+}
+
+.li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    background-color: #3e3f46;
+    box-sizing: border-box;
+    padding: 0px 15px;
+    z-index: var(--i);
+    cursor: pointer;
+    transition: 0.5s;
+    height: 55px;
+}
+
+.li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 30px;
+    height: 100%;
+    background-color: #3e3f46;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+.li::after{
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #3e3f46;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+.li:hover{
+    background-color: #33a3ee;
+    transform: translateX(20%);
+}
+
+.li:hover::before,
+.li:hover::after{
+    background-color: #33a3ee;
+}
+
+.li:last-child::after{
+    box-shadow: -100px 120px 30px rgba(0, 0, 0, 0.25);
+}
+
+.p{
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    cursor: pointer;
+    line-height: 55px;
+    margin: 0;
+
+}
+
+.li:hover .p{
+    color: #fff;
+}

@@ -1,0 +1,47 @@
+.box{
+    width: 100%;
+    column-count: 2;
+    column-gap: 1px;
+    background-color: rgba(0,0,0,0);
+    height: 40px;
+}
+
+.item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #3e3f46;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    transition: all 0.5s ease;
+}
+
+.item:hover{
+    cursor: pointer;
+    background-color:#f64c3f;
+}
+
+.box_icon{
+    height: 40px;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.icon{
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+   
+}
+
+.value p{
+    margin: 0px;
+    color: #fff;
+    line-height:40px;
+    font-size: 14px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
